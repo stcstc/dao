@@ -7,11 +7,10 @@ public class Emp {
 	private String ename;
 	private String job;
 	private Date hiredate;
-	private int mgr;
 	private double sal;
 	private double comm;
 	private int deptno;
-	
+	private int mgr;
 	public int getMgr() {
 		return mgr;
 	}

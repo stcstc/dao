@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 public class DBUtil {
 	private static String driverName="com.mysql.jdbc.Driver";
-	private static String url="jdbc:mysql://localhost:3306/hello";
+	private static String url="jdbc:mysql://localhost:3306/neuedu";
 	private static String user="root";
 	private static String password="root";
 			
@@ -26,7 +26,7 @@ public class DBUtil {
     	try {
     		con=DriverManager.getConnection(url,user,password);
 		} catch (SQLException e) {
-			System.out.println("连接失败："+e.getMessage());
+			System.out.println(e.getMessage());
 		}
     	return con;
     }
@@ -37,7 +37,7 @@ public class DBUtil {
     		  try {
 				con.close();
 			} catch (SQLException e) {
-				System.out.println("连接关闭失败:"+e.getMessage());
+				System.out.println("连接关闭失败"+e.getMessage());
 			}
     	  }
     	  
@@ -45,7 +45,7 @@ public class DBUtil {
     		  try {
 				st.close();
 			} catch (SQLException e) {
-				System.out.println("statement对象关闭失败:"+e.getMessage());
+				System.out.println("statement对象关闭失败"+e.getMessage());
 			}
     	  }
     	 
@@ -53,7 +53,7 @@ public class DBUtil {
     		  try {
 				rs.close();
 			} catch (SQLException e) {
-				System.out.println("结果集关闭失败:"+e.getMessage());
+				System.out.println("结果集关闭失败"+e.getMessage());
 				e.printStackTrace();
 			}
     	  }
